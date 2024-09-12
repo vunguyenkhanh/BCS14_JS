@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập hàm</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <h1 class="text-center">Bài Tập JavaScript</h1>
+      <p class="text-center">By <a class="text-decoration-none" href="https://github.com/vunguyenkhanh">Vũ Nguyễn Khánh</a></p>
+      <div class="card w-75 mx-auto mt-4">
+        <div class="bg-holder d-none d-lg-block bg-card"></div>
+        <div class="card-body position-relative p-0">
+          <div class="row p-0">
+            <div class="col-12"></div>
+            <div
+              class="col-12 col-md-4 col-lg-3 col-xl-2 nav-tabs nav flex-md-column nav-pills"
+              id="v-pills-tab"
+              role="tablist"
+              aria-orientation="vertical">
+              <button
+                class="nav-link btn-tabs mb-2 active"
+                id="v-pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bai1"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true">
+                Bài 1
+              </button>
+              <button
+                class="nav-link btn-tabs mb-2"
+                id="v-pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bai2"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true">
+                Bài 2
+              </button>
+              <button
+                class="nav-link btn-tabs mb-2"
+                id="v-pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bai3"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true">
+                Bài 3
+              </button>
+              <button
+                class="nav-link btn-tabs mb-2"
+                id="v-pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bai4"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true">
+                Bài 4
+              </button>
+            </div>
+            <div
+              class="col-12 col-md-8 col-lg-9 col-xl-10 tab-content"
+              id="v-pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="bai1"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab">
+                <h4 class="card--heading">🏫 Quản lý tuyển sinh</h4>
+                <div class="callout callout-info">
+                  <p>
+                    📄
+                    <b>Đề bài:</b>
+                  </p>
+                  <details>
+                    <summary>Mở rộng để xem thêm</summary>
+                    <ul>
+                      <li>
+                        Trong kỳ thi tuyển, một thí sinh sẽ trúng tuyển nếu có
+                        điểm tổng kết lớn hơn hoặc bằng điểm chuẩn và không có
+                        môn nào điểm 0.
+                        <br />
+                        - Điểm tổng kết là tổng điểm của 3 môn thi và điểm ưu
+                        tiên.
+                        <br />
+                        - Điểm ưu tiên bao gồm điểm ưu tiên theo khu vực và điểm
+                        ưu tiên theo đối tượng.
+                      </li>
+                      <li>
+                        Viết chương trình nhập: điểm chuẩn của hội đồng, điểm 3
+                        môn thi của thí sinh, khu vực (nhập X nếu không thuộc
+                        khu vực ưu tiên) và đối tượng dự thi (nhập 0 nếu không
+                        thuộc đối tượng ưu tiên). Cho biết thí sinh đó đậu hay
+                        rớt và tổng số điểm đạt được.
+                        <img
+                          class="img-fluid mt-2"
+                          src="./img/bai1.jpg"
+                          alt="" />
+                      </li>
+                    </ul>
+                  </details>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="number"
+                      class="form-control form__input"
+                      id="diemChuan"
+                      placeholder="Điểm chuẩn" />
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <select
+                      class="form-control form__input"
+                      name=""
+                      id="khuVucUuTien">
+                      <option value="0">Chọn khu vực</option>
+                      <option value="0">X</option>
+                      <option value="2">A</option>
+                      <option value="1">B</option>
+                      <option value="0.5">C</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <select
+                      class="form-control form__input"
+                      name=""
+                      id="doiTuongUuTien">
+                      <option value="0">Chọn đối tượng</option>
+                      <option value="0">0</option>
+                      <option value="2.5">1</option>
+                      <option value="1.5">2</option>
+                      <option value="1">3</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="number"
+                      class="form-control form__input"
+                      id="diemMon1"
+                      placeholder="Điểm môn thứ 1" />
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="number"
+                      class="form-control form__input"
+                      id="diemMon2"
+                      placeholder="Điểm môn thứ 2" />
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="number"
+                      class="form-control form__input"
+                      id="diemMon3"
+                      placeholder="Điểm môn thứ 3" />
+                  </div>
+
+                  <div class="col-12">
+                    <button
+                      class="btn btn--primary me-1 mb-1"
+                      type="button"
+                      id="btnKetQuaDiem">
+                      Kết Quả
+                    </button>
+                  </div>
+                  <div class="alert alert-success" role="alert">
+                    👉
+                    <span id="inKetQuaDiem"></span>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bai2"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab">
+                <h4 class="card--heading">🔋 Tính tiền điện</h4>
+                <div class="callout callout-info">
+                  <p>
+                    📄
+                    <b>Đề bài:</b>
+                  </p>
+                  <details>
+                    <summary>Mở rộng để xem thêm</summary>
+                    <p class="px-3">
+                      Viết chương trình nhập vào thông tin tiêu thụ điện (Tên,
+                      số Kw).
+                      <br />
+                      Tính và xuất Tiền trả theo quy tắc:
+                      <br />
+                      <img class="img-fluid" src="./img/bai2.jpg" alt="" />
+                    </p>
+                  </details>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="text"
+                      class="form-control form__input"
+                      id="tenKhachHang"
+                      placeholder="Nhập họ và tên" />
+                  </div>
+
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="number"
+                      class="form-control form__input"
+                      id="soKw"
+                      placeholder="Nhập số kw" />
+                  </div>
+
+                  <div class="col-12">
+                    <button
+                      class="btn btn--primary me-1 mb-1"
+                      type="button"
+                      id="btnTienDien">
+                      Tính tiền điện
+                    </button>
+                  </div>
+                  <div class="alert alert-success" role="alert">
+                    👉
+                    <span id="inTienDien"></span>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bai3"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab">
+                <h4 class="card--heading">💰 Tính thuế thu nhập cá nhân</h4>
+                <div class="callout callout-info">
+                  <p>
+                    📄
+                    <b>Gợi ý:</b>
+                  </p>
+                  <details>
+                    <summary>Mở rộng để xem thêm</summary>
+                    <ul>
+                      <li>
+                        Viết chương trình nhập vào thông tin của 1 cá nhân (Họ
+                        tên, tổng thu nhập năm, số người phụ thuộc).
+                      </li>
+                      <li>
+                        Tính và xuất thuế thu nhập cá nhân phải trả theo quy
+                        định sau:
+                        <br />
+                        Thu nhập chịu thuế = Tổng thu nhập năm - 4tr - Số người
+                        phụ thuộc * 1.6tr
+                      </li>
+                      <img class="img-fluid" src="./img/bai3.jpg" alt="" />
+                    </ul>
+                  </details>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="text"
+                      class="form-control form__input"
+                      id="tenCaNhan"
+                      placeholder="Nhập họ và tên" />
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="number"
+                      class="form-control form__input"
+                      id="tongThuNhap"
+                      placeholder="Tổng thu nhập năm" />
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="number"
+                      class="form-control form__input"
+                      id="soNguoiPhuThuoc"
+                      placeholder="Số người phụ thuộc" />
+                  </div>
+
+                  <div class="col-12">
+                    <button
+                      class="btn btn--primary me-1 mb-1"
+                      type="button"
+                      id="btnThue">
+                      Tính tiền thuế
+                    </button>
+                  </div>
+                  <div class="alert alert-success" role="alert">
+                    👉
+                    <span id="inThue"></span>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bai4"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab">
+                <h4 class="card--heading">🕸️ Tính tiền cáp</h4>
+                <div class="callout callout-info">
+                  <p>
+                    📄
+                    <b>Đề bài:</b>
+                  </p>
+                  <details>
+                    <summary>Mở rộng để xem thêm</summary>
+                    <ul>
+                      <li>
+                        Viết chương trình tính hóa đơn khách hàng cho một công
+                        ty cáp. Có 2 loại khách hàng: Nhà dân và doanh nghiệp.
+                        Có 2 mức giá tính tiền cáp:
+                        <ol>
+                          <li>
+                            Nhà dân:
+                            <ul>
+                              <li>Phí xử lý hóa đơn: 4.5$</li>
+                              <li>Phí dịch vụ cơ bản: 20.5$</li>
+                              <li>Thuê kênh cao cấp: 7.5$ / kênh</li>
+                            </ul>
+                          </li>
+                          <li>
+                            Doanh nghiệp:
+                            <ul>
+                              <li>Phí xử lý hóa đơn: 15$</li>
+                              <li>
+                                Phí dịch vụ cơ bản: 75$ cho tổng 10 kết nối đầu,
+                                mỗi kết nối thêm 5$ / kết nối
+                              </li>
+                              <li>Thuê kênh cao cấp: 50$ / kênh</li>
+                            </ul>
+                          </li>
+                        </ol>
+                      </li>
+                      <li>
+                        Chương trình cho phép nhập vào Mã khách hàng, loại khách
+                        hàng, số kết nối, số kênh cao cấp. Nếu chọn loại khách
+                        hàng là Doanh nghiệp ô nhập số kết nối sẽ hiện lên, nếu
+                        chọn loại khách hàng là nhà dân thì ô nhập kết nối sẽ ẩn
+                        đi hoặc disabled
+                      </li>
+                    </ul>
+                  </details>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12 col-lg-4">
+                    <select
+                      class="form-control form__input"
+                      name=""
+                      id="loaiKhachHang"
+                      onchange="anInput()">
+                      <option value="">Chọn loại khách hàng</option>
+                      <option value="nhaDan">Nhà Dân</option>
+                      <option value="doanhNghiep">Doanh Nghiệp</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="text"
+                      class="form-control form__input"
+                      id="maKhachHang"
+                      placeholder="Nhập mã khách hàng" />
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="number"
+                      class="form-control form__input"
+                      id="soKenh"
+                      placeholder="Số kênh cao cấp" />
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="number"
+                      style="display: none"
+                      class="form-control form__input"
+                      id="soKetNoi"
+                      placeholder="Số kết nối" />
+                  </div>
+
+                  <div class="col-12">
+                    <button
+                      class="btn btn--primary me-1 mb-1"
+                      type="button"
+                      id="btnTienCap">
+                      Tính tiền cáp
+                    </button>
+                  </div>
+                  <div class="alert alert-success" role="alert">
+                    👉
+                    <span id="inTienCap"></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
