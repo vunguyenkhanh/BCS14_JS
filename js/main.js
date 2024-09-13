@@ -60,7 +60,8 @@ function tinhTienDien() {
       150 * giaTien150KwKe +
       (soKw - 350) * giaTienConLai;
   } else {
-    inTienDien.innerHTML = 'Số KW không hợp lệ';
+    inTienDien.innerHTML = 'Số Kw không hợp lệ';
+    return;
   }
 
   inTienDien.innerHTML = `Tên khách hàng: ${tenKhachHang} - Tiền điện: ${tongTienDien.toLocaleString(
@@ -100,7 +101,11 @@ function tinhThueThuNhap() {
     thueThuNhap = thuNhapChiuThue * thueSuatTren624Den960;
   } else if (thuNhapChiuThue > 960e6) {
     thueThuNhap = thuNhapChiuThue * thueSuatTren960;
+  } else {
+    inThue.innerHTML = 'Số tiền thu nhập không hợp lệ';
+    return;
   }
+
   inThue.innerHTML = `Tên cá nhân: ${tenCaNhan} - Thuế thu nhập: ${thueThuNhap.toLocaleString(
     'vi-VN',
   )} VNĐ`;
@@ -115,7 +120,13 @@ function tinhTienCap() {
   let soKenh = Number(document.getElementById('soKenh').value);
   let soKetNoi = Number(document.getElementById('soKetNoi').value);
   let inTienCap = document.getElementById('inTienCap');
-  let tongTienCap = tinhTongCap(loaiKhachHang, soKenh, soKetNoi);
+  let tongTienCap = 0;
+  
+  if (loaiKhachHang && soKetNoi >= 0) {
+    tongTienCap = tinhTongCap(loaiKhachHang, soKenh, soKetNoi);
+  } else {
+    inTienCap.innerHTML = 'Dữ liệu không hợp lệ';
+  }
 
   inTienCap.innerHTML = `Mã khách hàng: ${maKhachHang} - Tổng tiền cáp: ${tongTienCap.toLocaleString(
     'en-US',
