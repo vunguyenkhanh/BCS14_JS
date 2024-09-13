@@ -121,11 +121,12 @@ function tinhTienCap() {
   let soKetNoi = Number(document.getElementById('soKetNoi').value);
   let inTienCap = document.getElementById('inTienCap');
   let tongTienCap = 0;
-  
-  if (loaiKhachHang && soKetNoi >= 0) {
+
+  if (loaiKhachHang != '' && soKetNoi >= 0) {
     tongTienCap = tinhTongCap(loaiKhachHang, soKenh, soKetNoi);
   } else {
-    inTienCap.innerHTML = 'Dữ liệu không hợp lệ';
+    inTienCap.innerHTML = 'Vui lòng nhập loại khách hàng';
+    return;
   }
 
   inTienCap.innerHTML = `Mã khách hàng: ${maKhachHang} - Tổng tiền cáp: ${tongTienCap.toLocaleString(
